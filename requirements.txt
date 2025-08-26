@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+pandas>=2.1
+numpy>=1.24
+scikit-learn
+sentence-transformers
+chromadb>=0.3
+agno>=1.7.12
+pyjwt
+cryptography
+python-dotenv
+prometheus-client
+python-multipart
+requests

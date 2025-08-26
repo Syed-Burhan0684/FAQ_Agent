@@ -1,0 +1,28 @@
+
+services:
+  agent:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: agent
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../data:/app/data
+    environment:
+      - FAQ_CSV=data/faq.csv
+      - CHROMA_PATH=./chroma_db
+      - LOCAL_EMB_MODEL=all-MiniLM-L6-v2
+      - FAQ_CONFIDENCE_THRESHOLD=0.7
+      - AGNO_TELEMETRY=false
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      - agent

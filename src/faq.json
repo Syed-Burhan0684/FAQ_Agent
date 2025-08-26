@@ -1,0 +1,14 @@
+[
+  {
+    "question": "How can I reset my password?",
+    "answer": "To reset your password go to Settings → Reset Password and follow the instructions."
+  },
+  {
+    "question": "What is your refund policy?",
+    "answer": "We offer refunds within 30 days of purchase. To request a refund contact support@example.com with your order ID."
+  },
+  {
+    "question": "How can I contact human support?",
+    "answer": "Type 'human' or 'agent' and the system will escalate to human support. You can also email support@example.com."
+  }
+]
